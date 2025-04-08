@@ -11,6 +11,7 @@ activityCompose = "1.10.1"
 composeBom = "2025.03.00"
 composeDestinations = "2.1.0"
 hilt = "2.56.1"
+hilt-navigation-compose = "1.2.0"
 material = "1.7.8"
 kotlinxSerializationJson = "1.6.3"
 loggingInterceptor = "4.12.0"
@@ -41,6 +42,7 @@ compose-destinations-ksp = { group = "io.github.raamcosta.compose-destinations",
 
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
 
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
