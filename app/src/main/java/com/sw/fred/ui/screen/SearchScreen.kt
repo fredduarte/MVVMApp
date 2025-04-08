@@ -11,13 +11,13 @@ import com.sw.fred.R
 import com.sw.fred.graph.MainGraph
 
 @Composable
-@Destination<MainGraph>(start = true)
-fun HomeScreen(
+@Destination<MainGraph>()
+fun SearchScreen(
     modifier: Modifier = Modifier,
 ) {
     Text(
         modifier = modifier.fillMaxWidth(),
         textAlign = TextAlign.Center,
-        text = stringResource(id = R.string.home_scree_title),
+        text = stringResource(id = R.string.search_screen_title),
     )
 }

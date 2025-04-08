@@ -22,6 +22,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "THE_MEAL_DB_API_URL", "\"https://www.themealdb.com/api/json/v1\"")
+            buildConfigField("String", "THE_MEAL_DB_INGREDIENT_THUMB_API_URL", "\"https://www.themealdb.com/images/ingredients\"")
+            buildConfigField("String", "THE_MEAL_DB_API_KEY", "\"1\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -38,6 +43,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 }
@@ -52,6 +58,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    implementation(libs.androidx.material)
 
     implementation(libs.compose.destinations.core)
     ksp(libs.compose.destinations.ksp)
