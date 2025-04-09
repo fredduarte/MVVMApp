@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.hilt.android)
 }
@@ -23,8 +24,8 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "THE_MEAL_DB_API_URL", "\"https://www.themealdb.com/api/json/v1\"")
-            buildConfigField("String", "THE_MEAL_DB_INGREDIENT_THUMB_API_URL", "\"https://www.themealdb.com/images/ingredients\"")
+            buildConfigField("String", "THE_MEAL_DB_API_URL", "\"https://www.themealdb.com/api/json/v1/\"")
+            buildConfigField("String", "THE_MEAL_DB_INGREDIENT_THUMB_API_URL", "\"https://www.themealdb.com/images/ingredients/\"")
             buildConfigField("String", "THE_MEAL_DB_API_KEY", "\"1\"")
         }
         release {
