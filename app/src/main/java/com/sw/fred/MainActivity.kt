@@ -54,9 +54,7 @@ fun MainApp() {
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.primary,
                 ),
-                title = {
-                    Text("Top app bar")
-                }
+                title = {}
             )
         },
         bottomBar = {
