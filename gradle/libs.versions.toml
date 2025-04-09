@@ -1,4 +1,9 @@
 [versions]
+applicationId = "com.sw.fred"
+minSdk = "30"
+compileSdk = "35"
+appVersionCode = "1"
+appVersionName = "1.0"
 agp = "8.9.1"
 kotlin = "2.0.21"
 ksp = "2.0.21-1.0.26"    # KSP version should match the Kotlin version
