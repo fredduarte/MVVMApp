@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class ApiCategories(
-    val categories: List<ApiCategories>,
+    val categories: List<ApiCategory>,
 )
