@@ -31,16 +31,19 @@ class HomeViewModel @Inject constructor(
                 // Fetch all categories
                 val categories = repository.getCategories()
 
+                val allCategoryRecipes = mutableListOf<CategoryRecipes>()
                 // Fetch recipes for ALL categories
                 categories.forEach { category ->
                     val recipes = repository.getRecipesByCategory(category = category.name)
-                    val allCategoryRecipes = recipes.map { recipe ->
+                    val categoryRecipes = recipes.map { recipe ->
                         CategoryRecipes(category = category, recipes = recipes)
                     }
-                    _viewState.value = ViewState.Success(
-                        recipes = allCategoryRecipes,
-                    )
+                    allCategoryRecipes.addAll(categoryRecipes)
                 }
+
+                _viewState.value = ViewState.Success(
+                    categoryRecipes = allCategoryRecipes,
+                )
             } catch (e: Exception) {
                 Log.e(TAG, e.toString())
                 _viewState.value = ViewState.Error(
@@ -52,7 +55,7 @@ class HomeViewModel @Inject constructor(
 
     sealed interface ViewState {
         data class Success(
-            val recipes: List<CategoryRecipes>,
+            val categoryRecipes: List<CategoryRecipes>,
         ) : ViewState
 
         data class Error(

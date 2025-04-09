@@ -2,5 +2,8 @@
     <string name="app_name">MVVMApp</string>
 
     <string name="home_scree_title">Home</string>
-    <string name="search_screen_title">Search</string>
+    <string name="search_screen_title">WIP</string>
+    <string name="home_error_message">Something went wrong!</string>
+    <string name="loading">Loading…</string>
+    <string name="no_results">No Results found.</string>
 </resources>
