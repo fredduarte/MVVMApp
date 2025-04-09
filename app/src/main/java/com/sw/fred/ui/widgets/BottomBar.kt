@@ -79,5 +79,5 @@ enum class BottomBarDestination(
     @StringRes val label: Int
 ) {
     Home(HomeScreenDestination, Icons.Default.Home, R.string.home_scree_title),
-    Search(SearchScreenDestination, Icons.Default.Search, R.string.search_screen_title),
+    Search(SearchScreenDestination, Icons.Default.Search, R.string.search_screen_bottom_bar_title),
 }
