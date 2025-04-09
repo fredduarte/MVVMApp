@@ -12,8 +12,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class ApiCategory(
-    val idCategory: String,
-    val strCategory: String,
-    val strCategoryThumb: String,
-    val strCategoryDescription: String,
+    val idCategory: String = "",
+    val strCategory: String = "",
+    val strCategoryThumb: String = "",
+    val strCategoryDescription: String = "",
 )
